@@ -117,9 +117,65 @@ const bindEvents = function(){
 }
 
 
+
+const imageLoaderProcess = function(){
+    //- Add Overlay
+    $('body').append(
+        '<div class="imgLoaderOverlay">'
+            +'<div>'
+            +'<h1>Loading Images...</h1>'
+            +'<h2>(<span class="imgLoaderCurrent"></span> of <span class="imgLoaderTotal"></span>)</h2>'
+            +'</div>'
+        +'</div>'
+    );
+
+    //
+    const $images = $('.previewWrapper img');
+    var totalImages = $images.length;
+    var loadedCount = 0;
+
+    const removeOverlay = function() {
+        $('.imgLoaderOverlay').fadeOut(500, function() {
+            $(this).remove();
+        });
+    }
+
+    function imageLoaded() {
+        loadedCount++;
+
+        $('.imgLoaderCurrent').text(loadedCount);
+        $('.imgLoaderTotal').text(totalImages);
+
+        if( loadedCount >= totalImages ){
+            removeOverlay();
+        }
+    }
+
+    if (totalImages === 0) {
+        removeOverlay();
+        return;
+    }
+
+    $images.each(function() {
+        if( this.complete ){
+            imageLoaded();
+        } else {
+            $(this).on('load error', function() {
+                imageLoaded();
+            });
+        }
+    });
+
+
+}
+
+
 const init = function(){
+    imageLoaderProcess();
+
     buildConfigOptions();
     bindEvents();
     makeActiveSelection();
     buildConfigImage();
 }
+

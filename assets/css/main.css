@@ -68,3 +68,11 @@ html,body{margin:0; padding:0; width:100vw; height:100vh; overflow:hidden; posit
     .componentOptions[data-component="Shelf"],
     .componentOptions[data-component="Wall"]
     {margin-bottom:30px}
+
+
+
+/* Images Loader */
+.imgLoaderOverlay {position:fixed; top:0; left:0; right:0; bottom:0; z-index:9999; background:rgba(255,255,255,0.8); display:flex;}
+.imgLoaderOverlay>div{padding:15px; margin:auto; box-sizing:border-box; background:#fff; box-shadow:0 0 5px rgba(0,0,0,0.2); text-align:center}
+.imgLoaderOverlay h1{font-size:13px; font-weight:bold; margin:0 0 5px; color:#666}
+.imgLoaderOverlay h2{font-size:12px; font-weight:bold; margin:0;}
