@@ -12,7 +12,7 @@ html,body{margin:0; padding:0; width:100vw; height:100vh;  overflow:hidden; posi
     }
 
 .configWrapper{
-    position:absolute; top:10px; right:10px; z-index:500;
+    position:absolute; top:10px; right:10px; bottom:10px; z-index:500;
     box-sizing:border-box; width:270px; height:calc(100vh - 20px); padding:10px; overflow-x:hidden;
     background:rgba(0,0,0,0.8); border-radius:16px; color:#eee;
 }
@@ -20,7 +20,7 @@ html,body{margin:0; padding:0; width:100vw; height:100vh;  overflow:hidden; posi
 html,body,.previewWrapper{height:100dvh}
 .configWrapper{height:calc(100dvh - 20px)}
 
-html,body{overflow-x: hidden; overflow-y:auto;}
+html,body{overflow-x: hidden; overflow-y:scroll;}
 
 
 /* Images */
