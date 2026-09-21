@@ -20,6 +20,8 @@ html,body{margin:0; padding:0; width:100vw; height:100vh;  overflow:hidden; posi
 html,body,.previewWrapper{height:100dvh}
 .configWrapper{height:calc(100dvh - 20px)}
 
+html,body{overflow-x: hidden; overflow-y:auto;}
+
 
 /* Images */
 .imgWrapper{opacity:0; visibility:0;}
