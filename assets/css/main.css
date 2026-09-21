@@ -2,9 +2,9 @@
 body, body * {font-family:Arial, Helvetica, sans-serif; font-size:12px}
 
 /* Main Layout */
-html,body{margin:0; padding:0; width:100vw; height:100vh; height:100dvh; height:100%; overflow:hidden; position:relative;}
+html,body{margin:0; padding:0; width:100vw; height:100vh;  overflow:hidden; position:relative;}
 
-.previewWrapper{width:100vw; height:100vh; height:100dvh; height:100%; display:flex; position:relative}
+.previewWrapper{width:100vw; height:100vh; display:flex; position:relative}
     .previewWrapper img{
         position:absolute; top:0; left:0; 
         width:100%; height:100%; margin:auto; object-fit:contain;
@@ -16,6 +16,9 @@ html,body{margin:0; padding:0; width:100vw; height:100vh; height:100dvh; height:
     box-sizing:border-box; width:270px; height:calc(100vh - 20px); padding:10px; overflow-x:hidden;
     background:rgba(0,0,0,0.8); border-radius:16px; color:#eee;
 }
+
+html,body,.previewWrapper{height:100dvh}
+.configWrapper{height:calc(100dvh - 20px)}
 
 
 /* Images */
